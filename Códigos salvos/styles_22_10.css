@@ -1,0 +1,151 @@
+/* Ajuste das margens da página para utilizar mais largura */
+.container-ppgec {
+  font-family: 'Sora', sans-serif;
+  color: rgb(17, 32, 48);
+  padding-bottom: 50px;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logo-container {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.ppgec-logo {
+  width: 300px;
+  margin-bottom: 0;
+}
+
+.ppgec-title {
+  font-size: 24px;
+  color: rgb(40, 161, 219);
+  margin: 0 0 40px;
+}
+
+.ppgec-subtitle {
+  font-size: 28px;
+  color: rgb(151, 153, 155);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.anos-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.upload-label {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-input {
+  width: 150px;
+  height: 40px;
+}
+
+.upload-button {
+  height: 40px;
+}
+
+.nome-pessoa {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: rgb(40, 161, 219);
+}
+
+.table-title {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-table {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+.custom-table .MuiTableCell-root {
+  padding: 0px 2px;
+  max-height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* Personalização de colunas */
+.custom-table .col-periodico,
+.custom-table .col-titulo {
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.custom-table .col-pts {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Centralizar e ajustar colunas */
+.custom-table .col-ano, .col-doi, .col-issn, .col-qualis, .col-jcr, .col-quartil-jcr, .col-sjr, .col-quartil-sjr, .col-dp, .col-dc, .col-dis {
+  text-align: center;
+  width: 40px;
+}
+
+.custom-table .col-autores-header, .col-autores {
+  text-align: left;
+}
+
+.input-editable {
+  width: 16px;
+  padding: 2px;
+  font-size: 10px;
+  text-align: center;
+  height: 16px;
+}
+
+/* Estilo para campos de edição */
+input[type='text']::-webkit-outer-spin-button,
+input[type='text']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='text'] {
+  -moz-appearance: textfield;
+}
+
+.even-row {
+  background-color: rgba(40, 161, 219, 0.05);
+}
+
+.odd-row {
+  background-color: white;
+}
+
+.table-header {
+  border-bottom: 2.1px solid rgb(40, 161, 219);
+  border-top: 2.1px solid rgb(40, 161, 219);
+}
+
+.custom-table .MuiTableRow-root:last-child {
+  border-bottom: 2.1px solid rgb(40, 161, 219);
+}

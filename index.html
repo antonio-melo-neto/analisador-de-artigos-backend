@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interface de Testes - API PPGEC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Teste da API PPGEC</h1>
+
+    <h3>Enviar XML Zipado</h3>
+    <input type="file" id="xmlFile" />
+    <button onclick="enviarXML()">Enviar XML</button>
+    <pre id="xmlResponse"></pre>
+
+    <h3>Enviar Docentes (XLSX)</h3>
+    <input type="file" id="docentesFile" />
+    <button onclick="enviarDocentes()">Enviar Docentes</button>
+    <pre id="docentesResponse"></pre>
+
+    <h3>Enviar Discentes (JSON)</h3>
+    <input type="file" id="discentesFile" />
+    <button onclick="enviarDiscentes()">Enviar Discentes</button>
+    <pre id="discentesResponse"></pre>
+
+    <h3>Classificação Qualis</h3>
+    <input type="text" id="qualisISSN" placeholder="Digite o ISSN" />
+    <input type="file" id="qualisFile" />
+    <button onclick="enviarQualis()">Enviar</button>
+    <pre id="qualisResponse"></pre>
+
+    <h3>Obter SJR</h3>
+    <input type="text" id="sjrISSN" placeholder="Digite o ISSN" />
+    <input type="file" id="sjrFile" />
+    <button onclick="enviarSJR()">Enviar</button>
+    <pre id="sjrResponse"></pre>
+
+    <h3>Obter JCR</h3>
+    <input type="text" id="jcrISSN" placeholder="Digite o ISSN" />
+    <input type="file" id="jcrFile" />
+    <button onclick="enviarJCR()">Enviar</button>
+    <pre id="jcrResponse"></pre>
+  </div>
+
+  <script>
+async function enviarXML() {
+  const file = document.getElementById('xmlFile').files[0];
+  const formData = new FormData();
+  formData.append('file', file);
+  const response = await fetch('http://127.0.0.1:8000/upload/xml/', { method: 'POST', body: formData });
+  document.getElementById('xmlResponse').textContent = JSON.stringify(await response.json(), null, 2);
+}
+
+async function enviarDocentes() {
+  const file = document.getElementById('docentesFile').files[0];
+  const formData = new FormData();
+  formData.append('file', file);
+  const response = await fetch('http://127.0.0.1:8000/upload/docentes/', { method: 'POST', body: formData });
+  document.getElementById('docentesResponse').textContent = JSON.stringify(await response.json(), null, 2);
+}
+
+async function enviarDiscentes() {
+  const file = document.getElementById('discentesFile').files[0];
+  const formData = new FormData();
+  formData.append('file', file);
+  const response = await fetch('http://127.0.0.1:8000/upload/discentes/', { method: 'POST', body: formData });
+  document.getElementById('discentesResponse').textContent = JSON.stringify(await response.json(), null, 2);
+}
+
+async function enviarQualis() {
+  const file = document.getElementById('qualisFile').files[0];
+  const issn = document.getElementById('qualisISSN').value;
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('issn', issn);
+  const response = await fetch('http://127.0.0.1:8000/qualis/', { method: 'POST', body: formData });
+  document.getElementById('qualisResponse').textContent = JSON.stringify(await response.json(), null, 2);
+}
+
+async function enviarSJR() {
+  const file = document.getElementById('sjrFile').files[0];
+  const issn = document.getElementById('sjrISSN').value;
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('issn', issn);
+  const response = await fetch('http://127.0.0.1:8000/sjr/', { method: 'POST', body: formData });
+  document.getElementById('sjrResponse').textContent = JSON.stringify(await response.json(), null, 2);
+}
+
+async function enviarJCR() {
+  const file = document.getElementById('jcrFile').files[0];
+  const issn = document.getElementById('jcrISSN').value;
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('issn', issn);
+  const response = await fetch('http://127.0.0.1:8000/jcr/', { method: 'POST', body: formData });
+  document.getElementById('jcrResponse').textContent = JSON.stringify(await response.json(), null, 2);
+}
+  </script>
+
+</body>
+</html>

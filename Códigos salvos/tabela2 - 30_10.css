@@ -1,0 +1,341 @@
+/* Ajuste para a posição da Tabela 2 e Pontuação */
+.tabela2-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha os elementos no topo */
+  max-width: 100%;
+  margin-bottom: 20px; /* Espaço entre a tabela e a caixa de pontuação */
+}
+
+.table-qualis {
+  flex: 1; /* Permite que a tabela ocupe o espaço necessário */
+  max-width: 1100px;
+  margin-right: 20px; /* Espaço entre a tabela e a caixa de pontuação */
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* Ajusta a altura das linhas do cabeçalho */
+.table-qualis th {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 1.2; /* Reduz a altura da linha */
+}
+
+/* Ajusta a altura das linhas do corpo da tabela */
+.table-qualis td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.2; /* Reduz a altura da linha */
+}
+/* Estilo do título da Tabela 2 */
+.table-qualis-title {
+  font-family: 'Sora', sans-serif; /* Define a fonte */
+  color: #282828; /* Cor escura para melhor contraste */
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Estilo do container de Pontuação */
+.pontuacao-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 0.7; /* Ajusta a largura da caixa de pontuação */
+  font-family: 'Sora', sans-serif;
+  background-color: rgba(40, 161, 219, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px; /* Ajusta a largura da caixa */
+}
+
+.pontuacao-container h3 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.pontuacao-value {
+  margin-bottom: 10px;
+  font-size: 44px;
+  font-weight: bold;
+  color: rgb(40, 161, 219);
+  text-align: center;
+  margin: 0;
+}
+
+/* Contêiner da Tabela e Pontuação */
+.tabela-e-pontuacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Contêiner de Botões de Ação abaixo da Tabela e da Caixa de Pontuação */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px; /* Espaço entre a tabela/pontuação e os botões */
+  clear: both; /* Garante que os botões fiquem abaixo */
+}
+
+/* Estilos dos Botões Individuais */
+.generate-pdf-button,
+.save-edit-button,
+.reset-edit-button {
+  width: 150px;
+  padding: 5px;
+  height: 40px;
+  font-size: 12px;
+  font-family: 'Sora', sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Estilo específico para o botão Gerar PDF */
+.generate-pdf-button {
+  font-weight: bold !important;
+  background-color: rgb(40, 161, 219)!important;
+  color: #000000!important;
+  padding: 10px 20px;
+}
+
+/* Estilo específico para o botão Salvar Edição */
+.save-edit-button {
+  background-color: rgb(40, 161, 219, 0.8)!important;
+  font-size: 12px !important;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Estilo específico para o botão Resetar Edição */
+.reset-edit-button {
+  background-color: rgb(40, 161, 219, 0.7)!important;
+  font-size: 12px !important;
+  background-color: #d63384;
+  color: #ffffff;
+}
+
+/* Estilos para o botão Resetar Tudo */
+.reset-all-button {
+  background-color: rgb(40, 161, 219, 0.8)!important; /* Vermelho claro para indicar a função de reset completo */
+  color: #000000!important;
+  font-family: 'Sora', sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 10px 20px;
+  width: 130px;
+  height: 40px;
+  font-size: 12px !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-all-button:hover {
+  background-color: #ff4d4d !important; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Bordas da tabela */
+.table-header {
+  border-top: 2px solid rgb(40, 161, 219);
+  border-bottom: 2px solid rgb(40, 161, 219);
+}
+
+/* Linhas alternadas */
+.even-row {
+  background-color: rgba(40, 161, 219, 0.03);
+}
+
+.odd-row {
+  background-color: rgb(147, 149, 152, 0.03);
+}
+
+/* Coluna Ano */
+.table-qualis th.col-ano {
+  width: 70px;
+  font-size: 20px; /* Tamanho maior para o cabeçalho */
+  font-weight: bold;
+  color: rgb(17, 32, 48);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.table-qualis td.col-ano {
+  width: 70px;
+  font-size: 18px; /* Tamanho menor para o corpo */
+  font-weight: bold;
+  color: rgb(17, 32, 48);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Colunas A1 a A4 */
+.table-qualis th.col-a1,
+.table-qualis th.col-a2,
+.table-qualis th.col-a3,
+.table-qualis th.col-a4 {
+  width: 70px;
+  color: rgb(17, 32, 48);
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle
+}
+
+.table-qualis td.col-a1,
+.table-qualis td.col-a2,
+.table-qualis td.col-a3,
+.table-qualis td.col-a4 {
+  width: 70px;
+  color: rgb(17, 32, 48, 0.8);
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle
+}
+
+/* Colunas B1 a B4 */
+.table-qualis th.col-b1,
+.table-qualis th.col-b2,
+.table-qualis th.col-b3,
+.table-qualis th.col-b4 {
+  width: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(147, 149, 152);
+  padding-left: 6px;
+  padding-right: 3px;
+  text-align: center;
+  vertical-align: middle
+}
+
+.table-qualis td.col-b1,
+.table-qualis td.col-b2,
+.table-qualis td.col-b3,
+.table-qualis td.col-b4 {
+  width: 50px;
+  font-size: 14px;
+  color: rgb(147, 149, 152);
+  padding-left: 6px;
+  padding-right: 3px;
+  text-align: center;
+  vertical-align: middle
+}
+
+/* Colunas C e NP */
+.table-qualis th.col-c,
+.table-qualis th.col-np {
+  width: 40px;
+  font-size: 12px;
+  color: rgb(147, 149, 152);
+  padding-left: 6px;
+  padding-right: 0px;
+  text-align: center;
+  vertical-align: middle
+}
+
+.table-qualis td.col-c,
+.table-qualis td.col-np {
+  width: 40px;
+  font-size: 12px;
+  color: rgb(147, 149, 152);
+  padding-left: 6px;
+  padding-right: 0px;
+  text-align: center;
+  vertical-align: middle
+}
+
+/* Colunas % B, % A, Total B */
+
+/* Coluna Total B específica */
+
+/* Estilo do cabeçalho e corpo para percent B */
+.table-qualis thead th.col-percent-b,
+.table-qualis tbody td.col-percent-b {
+  width: 70px !important;
+  padding-left: 12px;
+  padding-right: 6px;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: rgb(151, 153, 155) !important;
+  text-align: center;
+  vertical-align: middle
+}
+
+/* Estilo do cabeçalho e corpo para percent A */
+.table-qualis thead th.col-percent-a,
+.table-qualis tbody td.col-percent-a {
+  width: 60px !important;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: rgb(151, 153, 155) !important;
+  text-align: center;
+  vertical-align: middle
+}
+
+/* Estilo do cabeçalho e corpo para Total B */
+.table-qualis thead th.col-total-b,
+.table-qualis tbody td.col-total-b {
+  width: 100px !important;
+  padding-left: 3px;
+  padding-right: 6px;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: rgb(151, 153, 155) !important;
+  text-align: center !important;
+}
+
+/* Estilo do cabeçalho e corpo para PQD1-A */
+.table-qualis thead th.col-pqd1-a,
+.table-qualis tbody td.col-pqd1-a {
+  width: 100px !important;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #000000 !important;
+  text-align: center !important;
+}
+
+/* Estilo do cabeçalho e corpo para PQD1-AB */
+.table-qualis thead th.col-pqd1-ab,
+.table-qualis tbody td.col-pqd1-ab {
+  width: 100px !important;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #000000 !important;
+  text-align: center !important;
+}
+
+.table-qualis thead th.col-pqd1,
+.table-qualis tbody td.col-pqd1 {
+  width: 100px !important;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #000000 !important;
+  text-align: center !important;
+}

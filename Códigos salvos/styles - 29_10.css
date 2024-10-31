@@ -1,0 +1,322 @@
+/* Estilo geral da página */
+.container-ppgec {
+  font-family: 'Sora', sans-serif;
+  color: rgb(17, 32, 48);
+  width: 100vw;
+  padding-bottom: 50px;
+  margin-top: 10px;
+}
+
+.logo-container {
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ppgec-logo {
+  width: 400px;
+  margin-bottom: 0;
+}
+
+.ppgec-title {
+  font-size: 16px;
+  color: rgb(40, 161, 219);
+  margin: 0 0 40px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ppgec-subtitle {
+  font-size: 32px;
+  color: rgb(147, 149, 152);
+  margin-bottom: 40px;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Estilo dos campos de texto */
+.anos-container .MuiTextField-root {
+  width: 120px;
+  height: 50px;
+}
+
+.anos-container .MuiInputBase-input {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px;
+}
+
+.anos-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Upload */
+.upload-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left:12px;
+  }
+
+.upload-container {
+  display: flex;
+  gap: 10px;
+  align-items: right;
+  margin-left: 350px;
+}
+
+.file-input {
+  width: 200x;
+  height: 40px;
+}
+
+.upload-button {
+  width: 130px;
+  height: 40px;
+  font-size: 14px;
+}
+
+/* Nome da pessoa */
+.nome-pessoa {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(40, 161, 219);
+}
+
+/* Título da tabela */
+.table-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Tabela */
+.custom-table {
+  width: 100%; /* Ajuste a largura para ocupar mais espaço */
+  max-width: 100%; /* Evita que passe da largura máxima */
+  margin: 0 auto; /* Centraliza a tabela */
+}
+
+/* Estilo para o cabeçalho da tabela */
+.custom-table thead {
+  background-color: rgb(40, 161, 219, 0.2);
+  color: white;
+}
+
+.custom-table th {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 14px;
+}
+
+/* Corpo da tabela */
+.custom-table td {
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Colunas com largura ajustável e comportamento esperado */
+
+/* Coluna Ano */
+.custom-table td.col-ano {
+  font-weight: bold;
+  font-size: 14px;
+  width: 30px;
+  max-width: 30px;
+  word-wrap: break-word; /* Permite que o texto quebre nas colunas largas */
+  white-space: normal; /* Permite a quebra de linha */
+}
+
+/* Coluna DOI */
+.custom-table td.col-doi {
+  width: 35px;
+  max-width: 35px;
+  font-size: 14px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* Coluna ISSN */
+.custom-table td.col-issn {
+  width: 60px;
+  max-width: 60px;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+}
+
+/* Coluna Periódico */
+.custom-table td.col-periodico {
+  width: 250px;
+  max-width: 250px;
+  font-size: 12px; /* Tamanho menor para autores */
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Coluna Título */
+.custom-table td.col-titulo {
+  width: 250px;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 10px;
+  padding-right: 6px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Coluna Autores */
+.custom-table td.col-autores {
+  width: 300px;
+  max-width: 300px;
+  font-size: 9px; /* Tamanho menor para autores */
+  white-space: normal; /* Permitir quebra de linha */
+  word-wrap: break-word; /* Quebra de linha automática */
+  line-height: 1.2;
+  text-align: justify;
+}
+
+/* Coluna Qualis */
+.custom-table td.col-qualis {
+  width: 30px;
+  max-width: 30px;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 3px;
+  padding-right: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Coluna JCR */
+.custom-table td.col-jcr {
+  width: 30px;
+  max-width: 30px;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 6px;
+  padding-right: 3px;
+  font-size: 14px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+/* Coluna Quartil JCR */
+.custom-table td.col-quartil-jcr {
+  width: 30px;
+  max-width: 30px;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 6px;
+  padding-right: 0px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+  color: rgb(151, 153, 155);
+}
+
+/* Coluna SJR */
+.custom-table td.col-sjr {
+  width: 30px;
+  max-width: 30px;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 6px;
+  padding-right: 0px;
+  font-size: 14px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+/* Coluna Quartil SJR */
+.custom-table td.col-quartil-sjr {
+  width: 30px;
+  max-width: 30px;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 6px;
+  padding-right: 0px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+  color: rgb(40, 161, 219,0.9);
+}
+
+/* Coluna DP, DC, DIS, Pts */
+.custom-table td.col-dp,
+.custom-table td.col-dc,
+.custom-table td.col-dis{
+  width: 25px;
+  max-width: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.custom-table td.col-pts {
+  width: 30px;
+  max-width: 30px;
+  padding-top: 1px;  /* Espaçamento superior */
+  padding-bottom: 1px; /* Espaçamento inferior */
+  padding-left: 8px;
+  padding-right: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+ 
+/* Estilo de input editável */
+.input-editable {
+  width: 20px;
+  height:20px;
+  padding: 0px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Linhas alternadas */
+.even-row {
+  background-color: rgba(40, 161, 219, 0.05);
+}
+
+.odd-row {
+  background-color: white;
+}
+
+/* Bordas da tabela */
+.table-header {
+  border-bottom: 2px solid rgb(40, 161, 219);
+}
+
+.custom-table .MuiTableRow-root:last-child {
+  border-bottom: 2px solid rgb(40, 161, 219);
+}
